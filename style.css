@@ -19,19 +19,19 @@ body {
 .step-first {
     background-color: #fefefe;
     border-radius: 15px;
-    width: 60vw;
-    height: 70vh;
+    width: 800px;
+    height: 500px;
     padding: 1rem;
     display: flex;
 }
 
 .side-bar {
-    width: 40%;
+    width: 25%;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 0 0 0 1rem;
     background-image: url(assets/images/bg-sidebar-desktop.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 
@@ -76,12 +76,18 @@ body {
 }
 
 .step-info {
-    width: 60%;
+    width: 75%;
     padding: 1rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .description-step {
     margin-bottom: 2rem;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .description-step h1{
@@ -123,4 +129,169 @@ input[type="number"]::-webkit-inner-spin-button,
 info-date input[type="number"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     pointer-events: none;
+}
+
+/* esconder steps */
+
+.hide {
+    display: none;
+}
+
+/* step 2 start */
+
+.plan-step {
+    display: flex;
+    justify-content: center;
+}
+
+.plan-step img {
+    width: 45px;
+    height: 45px;
+}
+
+.plan-option {
+    width: 32%;
+    border: 1px solid hsl(243, 100%, 62%);
+    border-radius: 15px;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.plan-option:hover {
+    background-color: hsl(230, 23%, 90%);
+    
+}
+
+.plan-option:nth-child(2){
+    margin: 0 .5rem;
+}
+
+.plan-option div {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: hsl(231, 11%, 63%);
+}
+
+.plan-option div span {
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+}
+
+.selection-option {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(217, 100%, 97%);
+    margin: 2rem 0 6rem;
+}
+
+.selection-option span {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    border-radius: 8px;
+     width: 100px;
+     font-weight: 500;
+     height: 40px;
+     border: none;
+     cursor: pointer;
+}
+
+.buttons button:nth-child(1) {
+    color: hsl(213, 96%, 18%);
+     background-color: hsl(217, 100%, 97%);
+}
+
+.buttons button:nth-child(2) {
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+}
+
+/*  */
+
+/* Genel stil */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin: 10px 30px;
+}
+
+/* Giriş stil */
+.toggle-switch .toggle-input {
+  display: none;
+}
+
+/* Anahtarın stilinin etrafındaki etiketin stil */
+.toggle-switch .toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 24px;
+  background-color: hsl(243, 100%, 62%);
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Anahtarın yuvarlak kısmının stil */
+.toggle-switch .toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+/* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
+.toggle-switch .toggle-input:checked + .toggle-label {
+  background-color: #4CAF50;
+}
+
+.toggle-switch .toggle-input:checked + .toggle-label::before {
+  transform: translateX(16px);
+}
+
+/* Light tema */
+.toggle-switch.light .toggle-label {
+  background-color: #BEBEBE;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label {
+  background-color: #9B9B9B;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label::before {
+  transform: translateX(6px);
+}
+
+/* Dark tema */
+.toggle-switch.dark .toggle-label {
+  background-color: #4B4B4B;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label {
+  background-color: #717171;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label::before {
+  transform: translateX(16px);
 }
