@@ -92,12 +92,17 @@
           </div>
         </div>
         <div class="selection-option">
-          <span>Monthly</span>
+          <span class="monthly-text">Monthly</span>
           <div class="toggle-switch">
-            <input class="toggle-input" id="toggle" type="checkbox" />
+            <input
+              class="toggle-input"
+              id="toggle"
+              type="checkbox"
+              onclick="verificar()"
+            />
             <label class="toggle-label" for="toggle"></label>
           </div>
-          <span>Yearly</span>
+          <span class="yearly-text">Yearly</span>
         </div>
         <div class="buttons">
           <button>Go Back</button>
@@ -130,5 +135,6 @@
     at support@loremgaming.com. -->
 
     <!-- Step 5 end -->
+    <script src="script.js"></script>
   </body>
 </html>

@@ -187,6 +187,8 @@ info-date input[type="number"]::-webkit-calendar-picker-indicator {
     justify-content: center;
     background-color: hsl(217, 100%, 97%);
     margin: 2rem 0 6rem;
+    font-weight: 700;
+    color: hsl(228, 2%, 53%);
 }
 
 .selection-option span {
@@ -262,9 +264,7 @@ info-date input[type="number"]::-webkit-calendar-picker-indicator {
 }
 
 /* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
-.toggle-switch .toggle-input:checked + .toggle-label {
-  background-color: #4CAF50;
-}
+
 
 .toggle-switch .toggle-input:checked + .toggle-label::before {
   transform: translateX(16px);
@@ -295,3 +295,8 @@ info-date input[type="number"]::-webkit-calendar-picker-indicator {
 .toggle-switch.dark .toggle-input:checked + .toggle-label::before {
   transform: translateX(16px);
 }
+
+.toggle-color {
+    color: hsl(213, 96%, 18%);
+}
+
